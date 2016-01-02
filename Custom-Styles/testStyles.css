@@ -9,13 +9,6 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF)";
 }
 
-.sample-show-hide {
-  padding:10px;
-  border:1px solid black;
-  background:white;
-  opacity:0.9;
-
-}
 
 .sample-show-hide {
   -webkit-transition:all linear 0.5s;
@@ -37,6 +30,7 @@
     background-color:red;
     background-position: -340px 0px;
     background-repeat: no-repeat;
+    /* text-transform: uppercase; */
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -45,18 +39,39 @@
 }
 
 .main-container {
-    background-image: url('../images/apa_kafel_4a.jpg');
-    background-repeat:no-repeat;
+    background-image: url('../Images/APA_Kafel_4A.jpg');
     background-size:100% auto;
-    max-width:100%;
-    width:493px;
-    height:494px;
-    border: 2px dashed black;
+    background-repeat:no-repeat;
+    margin:5px;
+    padding:0px;
 }
 
-.info-container{
-    max-width:100%;
-    width:493px;
-    height:494px;
-    clear:both;
+.info-container-main{
+  border:1px solid silver;
+  background:white;
+  opacity:0.9;
+  background-size:100% auto;
+}
+
+@media (min-width: 293px) {
+  .main-container{
+    width:293px;
+    height:294px;
+  }
+  .info-container-main{
+    width:293px;
+    height:294px;
+  }
+   .info-container-content{
+    width:293px;
+    height:294px;
+  }
+
+}
+
+.info-container-content{
+  text-align:center;
+  font-family: 'Muli', sans-serif;
+  font-size:12px;
+  color:white;
 }

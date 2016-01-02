@@ -1,4 +1,4 @@
-﻿/* ------------------------------------------- */
+﻿﻿/* ------------------------------------------- */
 /* Mixins
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -252,8 +252,8 @@
   transform: translateX(-60px);
   -ms-transform: translateX(-60px);
   -webkit-transform: translateX(-60px);
-  transition-duration: 250ms;
-  -webkit-transition-duration: 250ms;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
   opacity: 0;
 }
 /* line 225, ../sass/ng-animation.scss */
@@ -268,8 +268,8 @@
   transform: translateX(0);
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
-  transition-duration: 250ms;
-  -webkit-transition-duration: 250ms;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
   opacity: 1;
 }
 /* line 236, ../sass/ng-animation.scss */
@@ -284,8 +284,8 @@
   transform: translateX(0);
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
-  transition-duration: 250ms;
-  -webkit-transition-duration: 250ms;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
   opacity: 1;
 }
 /* line 247, ../sass/ng-animation.scss */
@@ -300,8 +300,8 @@
   transform: translateX(-60px);
   -ms-transform: translateX(-60px);
   -webkit-transform: translateX(-60px);
-  transition-duration: 250ms;
-  -webkit-transition-duration: 250ms;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
   display: block !important;
   opacity: 0;
 }

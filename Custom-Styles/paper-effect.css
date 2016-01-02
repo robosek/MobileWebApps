@@ -1,0 +1,21 @@
+﻿     .note {
+          background:#123456;/*Background color of note-info content*/
+          position:relative;
+          overflow:hidden;
+      }
+
+      .note:before {
+          border-color:#fff #fff #0a1f33 #0a1f33; /*Color for the border of note, should be the same as background color above*/
+          background:#0a1f33; /*Color for the corner of note  */
+          content:"";
+          position:absolute;
+          top:0;
+          right:0;
+          border-width:0 16px 16px 0; /* This trick side-steps a webkit bug */
+          border-style:solid;
+          display:block; width:0; /* Only for Firefox 3.0 damage limitation */
+          /* Optional: shadow */
+          -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+          -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+          box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+      }
