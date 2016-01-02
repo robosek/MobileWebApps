@@ -26,9 +26,9 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Strona główna</a></li>
-                <li><a href="#">Konkurs</a></li>
-                <li><a href="#">Nagrody</a></li>
+                <li id="glowna"><a href="#">Strona główna</a></li>
+                <li id="ikony"><a href="#">Konkurs</a></li>
+                <li id="shuffleBtn"><a href="#">Nagrody</a></li>
                 <li><a href="#">Pomoc</a></li>
                 <!--<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
@@ -58,10 +58,74 @@
     <div class="container">
         <div class="text-center container-custom">
             <h1>Content here</h1>
+
+
+            <div class="grid">
+
+                <div class="photo-item col-md-5 glowna" data-category="glowna">
+                    <img class="img-responsive" src="http://kopalniapiwa.pl/wp-content/uploads/2015/04/eb_shrink_lewy_01042015-450x600.jpg">
+                </div>
+                <div class="photo-item col-md-5 glowna" data-category="glowna">
+                    <img class="img-responsive" src="http://admonkey.pl/wp-content/uploads/2015/04/eb-wraca_ikona-492x472.jpg">
+                </div>
+                <div class="photo-item col-md-5 glowna" data-category="glowna">
+                    <img class="img-responsive" src="http://bi.gazeta.pl/im/f6/f6/10/z17785590Q,Jean-Reno-reklamujacy-piwo-EB.jpg">
+                </div>
+                <div class="photo-item col-md-5 glowna" data-category="glowna">
+                    <img class="img-responsive" src="http://forum.nysa.pl/files/thumbs/t_czymniejeszczepamietasz_201.jpg">
+                </div>
+                <div class="photo-item col-md-5 ikony" data-category="ikony">
+                    <img class="img-responsive" src="http://findicons.com/files/icons/1788/large_icons_social/512/facebook.png">
+                </div>
+                <div class="photo-item col-md-5 ikony" data-category="ikony">
+                    <img class="img-responsive" src="http://i1.wp.com/blogigs.com/wp-content/uploads/2011/05/Twitter_512x512.png">
+                </div>
+                <div class="photo-item col-md-5 ikony" data-category="ikony">
+                    <img class="img-responsive" src="http://www.juloaliaspython.sk/wp-content/uploads/2014/07/YOUTUBE.png">
+                </div>
+                <div class="photo-item col-md-5 ikony" data-category="ikony">
+                    <img class="img-responsive" src="http://www.slvbigband.com/images/googleplus.png">
+                </div>
+            </div>
+
+
         </div>
     </div>
     <div id="footer" class="navbar navbar-fixed-bottom">Wszelkie prawa zastrzeżone <br/> © copyright</div>
     <script src="scripts/jquery-1.9.1.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.0.0/imagesloaded.pkgd.min.js"></script>
+    <!--<script src="bower_components/angular/angular.min.js"></script>-->
+    <!--<script src="Scripts/app.js"></script>-->
+
+    <script>
+        $( function() {
+            // init Isotope
+            var $grid = $('.grid').isotope({
+                    itemSelector: '.photo-item',
+                    layoutMode: 'fitRows',
+                    filter: '.glowna'
+            });
+
+            $grid.imagesLoaded().progress(function(){
+                $grid.isotope('layout');
+            });
+            // filter functions
+            $('#glowna').click(function(){
+                $grid.isotope({filter: ".glowna", sortBy: "glowna", sortAscending: false})
+                        //.isotope('shuffle');
+            });
+            $('#ikony').click(function(){
+                $grid.isotope({filter: ".ikony", sortBy: "glowna", sortAscending: true})
+                        //.isotope('shuffle');
+            });
+            $('#shuffleBtn').click(function(){
+                $grid.isotope('shuffle');
+            });
+
+        });
+
+    </script>
 </body>
 </html>
