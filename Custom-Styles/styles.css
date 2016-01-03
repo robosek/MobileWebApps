@@ -43,3 +43,7 @@ vertical-align:central;
 .text-center{
   padding-left:10%;
 }
+/*alerts in form modal*/
+div.alert.alert-danger {
+    margin-top: 5px;
+}

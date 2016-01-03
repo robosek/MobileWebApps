@@ -215,7 +215,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="photo-item ikony col-md-4 main-container" data-category="ikony" ng-init="checked9=false" ng-model="checked9" ng-mouseover="checked9=true" ng-mouseleave="checked9=false">
+                <div class="photo-item ikony col-md-6 main-container" data-category="ikony" ng-init="checked9=false" ng-model="checked9" ng-mouseover="checked9=true" ng-mouseleave="checked9=false">
                     <div class="check-element sample-show-hide  info-container-main note" ng-show="checked9">
                         <div class="slide-left info-container-content" ng-show="checked9">
                             <!--Content-->
@@ -238,6 +238,72 @@
 
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" ng-controller="ContestFormController">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h2 class="modal-title" id="myModalLabel">{{formData.title}}</h2>
+                    </div>
+                    <div class="modal-body">
+                        <h5>
+                            {{formData.content}}
+                        </h5>
+                        <form novalidate name="form">
+                            <div class="form-group">
+                                <label for="usertext" class="control-label">{{formData.text}}:</label>
+                                <textarea class="form-control" rows="8" name="usertext" id="usertext" ng-model="data.text" placeholder="{{formData.text}}" required=""></textarea>
+                                <div ng-show="form.$submitted || form.usertext.$touched">
+                                    <div class="alert alert-danger" ng-show="form.usertext.$error.required">{{formData.textRequired}}</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="control-label">{{formData.name}}:</label>
+                                <input type="text" class="form-control" name="name" id="name" ng-model="data.name" placeholder="{{formData.name}}" required="">
+                                <div ng-show="form.$submitted || form.name.$touched">
+                                    <div class="alert alert-danger" ng-show="form.name.$error.required">{{formData.nameRequired}}</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="surname" class="control-label">{{formData.surname}}:</label>
+                                <input type="text" class="form-control" name="surname" id="surname" ng-model="data.surname" placeholder="{{formData.surname}}" required="">
+                                <div ng-show="form.$submitted || form.surname.$touched">
+                                    <div class="alert alert-danger" ng-show="form.surname.$error.required">{{formData.surnameRequired}}.</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="control-label">{{formData.email}}:</label>
+                                <input type="email" class="form-control" name="email" id="email" ng-model="data.email" placeholder="{{formData.email}}" required="">
+                                <div ng-show="form.$submitted || form.email.$touched">
+                                    <div class="alert alert-danger" ng-show="form.email.$error.required || form.email.$error.email">
+                                        <span ng-show="form.email.$error.required">{{formData.emailRequired}}</span>
+                                        <span ng-show="form.email.$error.email">{{formData.emailFormat}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="control-label">{{formData.phone}}:</label>
+                                <input type="tel" class="form-control" name="phone" id="phone" ng-model="data.phone" placeholder="{{formData.phone}}" required="">
+                                <div ng-show="form.$submitted || form.phone.$touched">
+                                    <div class="alert alert-danger" ng-show="form.phone.$error.required">{{formData.phoneRequired}}.</div>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="dataUseApproval" ng-model="dataUseApproval" value="true" required="">{{formData.dataUseApproval}}</label>
+                                <div ng-show="form.$submitted || form.dataUseApproval.$touched">
+                                    <div class="alert alert-danger" ng-show="!dataUseApproval">{{formData.dataUseApprovalRequired}}</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">{{formData.close}}</button>
+                        <button type="submit" class="btn btn-primary" ng-click="submit(data)" ng-disabled="saveBtnDisabled">{{saveBtnText}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="footer" class="navbar navbar-fixed-bottom">Wszelkie prawa zastrzeżone <br /> © copyright</div>
         <script src="Scripts/angular.js"></script>
         <script src="Scripts/angular-animate.js"></script>
@@ -246,7 +312,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.0.0/imagesloaded.pkgd.min.js"></script>
         <!--<script src="bower_components/angular/angular.min.js"></script>-->
-        <!--<script src="Scripts/app.js"></script>-->
+        <script src="Scripts/formApp.js"></script>
         <script>
             $(function () {
                 // init Isotope
@@ -269,6 +335,9 @@
                 });
                 $('#shuffleBtn').click(function () {
                     $grid.isotope('shuffle');
+                });
+                $('.red-button').click(function(){
+                    $('#myModal').modal('show');
                 });
             });
         </script>
