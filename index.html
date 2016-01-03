@@ -437,7 +437,6 @@
                 </div>
             </div>
         </div>
-        <div id="footer" class="navbar navbar-fixed-bottom">Wszelkie prawa zastrzeżone <br /> © copyright</div>
         <div id="footer" class="navbar">Wszelkie prawa zastrzeżone <br /> © copyright</div>
         <script src="Scripts/angular.js"></script>
         <script src="Scripts/angular-animate.js"></script>
@@ -445,7 +444,6 @@
         <script src="Scripts/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.0.0/imagesloaded.pkgd.min.js"></script>
-        <!--<script src="bower_components/angular/angular.min.js"></script>-->
         <script src="Scripts/formApp.js"></script>
         <script>
             $(function () {
@@ -470,7 +468,11 @@
                 $('#shuffleBtn').click(function () {
                     $grid.isotope('shuffle');
                 });
+                //displaying form modal
                 $('.red-button').click(function(){
+                    $('#myModal').modal('show');
+                });
+                $('.btn-danger').click(function(){
                     $('#myModal').modal('show');
                 });
             });
