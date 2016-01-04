@@ -1,4 +1,5 @@
-﻿.hover-overlay {
+﻿
+.hover-overlay {
     top: 0px;
     left: 0px;
     width: 100%;
@@ -38,12 +39,36 @@
     margin-right: auto;
 }
 
-.main-container {
+.background_0{
+    background-image: url('../Images/Przyjazn.jpg');
+}
+
+.background_1{
     background-image: url('../Images/APA_Kafel_4A.jpg');
+}
+
+.background_2{
+    background-image: url('../Images/Konkurs.jpg');
+}
+
+.background_3{
+     background-image: url('../Images/EB_2.jpg');
+}
+.background_4{
+     background-image: url('../Images/EB_3.jpg');
+}
+.background_5{
+     background-image: url('../Images/Nagrody.jpg');
+}
+.background_6{
+     background-image: url('../Images/Browar.jpg');
+}
+.main-container {
     background-size:100% auto;
     background-repeat:no-repeat;
     margin:5px;
     padding:0px;
+    border: 1px solid silver;
 }
 
 .info-container-main{
@@ -127,71 +152,74 @@
 
 @media (max-width: 670px){
    .main-container{
-    width:400px;
+    width:203px;
     height:204px;
 
   }
   .info-container-main{
-    width:400px;
+    width:203px;
     height:204px;
     display:none;
   }
    .info-container-content{
-    width:400px;
+    width:203px;
     height:204px;
   }
   .mobile{
     display:inline-block;
-     width:400px;
+     width:203px;
     height:204px;
 }
 }
 @media (max-width: 600px){
    .main-container{
-    width:350px;
-    height:154px;
+    width:203px;
+    height:203px;
 
   }
   .info-container-main{
-    width:350px;
-    height:154px;
+    width:203px;
+    height:203px;
     display:none;
   }
    .info-container-content{
-    width:350px;
-    height:154px;
+    width:203px;
+    height:203px;
   }
   .mobile{
     display:inline-block;
-    width:350px;
-    height:154px;
+    width:203px;
+    height:203px;
+}
+    .tile-container{
+   padding-left:15%;
 }
 
 }
 
 @media (max-width: 500px){
    .main-container{
-    width:300px;
-    height:104px;
+    width:203px;
+    height:203px;
 
   }
   .info-container-main{
-    width:300px;
-    height:104px;
+    width:203px;
+    height:203px;
     display:none;
   }
    .info-container-content{
-    width:300px;
-    height:104px;
+    width:203px;
+    height:203px;
   }
   
   .tile-container{
-   padding-left:5%;
+   padding-left:15%;
 }
 .mobile{
     display:inline-block;
-      width:300px;
-    height:104px;
+      width:203px;
+    height:203px;
 }
   
 }
@@ -206,8 +234,8 @@
 }
 .mobile{
     display:inline-block;
-     width:300px;
-    height:104px;
+     width:203px;
+    height:203px;
 }
 
 }

@@ -1,12 +1,12 @@
 ﻿     .note {
-          background:#123456;/*Background color of note-info content*/
+          background:#e5c100;/*Background color of note-info content*/
           position:relative;
           overflow:hidden;
       }
 
       .note:before {
-          border-color:#fff #fff #0a1f33 #0a1f33; /*Color for the border of note, should be the same as background color above*/
-          background:#0a1f33; /*Color for the corner of note  */
+          border-color:#fff #fff #665600 #665600; /*Color for the border of note, should be the same as background color above*/
+          background:#665600; /*Color for the corner of note  */
           content:"";
           position:absolute;
           top:0;
