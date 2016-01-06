@@ -53,17 +53,17 @@ angular.module("ngAnimate").controller("ContestFormController", ["$scope", "Send
 angular.module("ngAnimate").factory("SendContestData", ['$http', function($http){
     return {
         //for sending actual data to server
-        /*sendData: function(contestData){
-            return $http.post("url", contestData)
+        sendData: function(contestData){
+            return $http.post("http://localhost:2137/contest/", contestData)
                 .success(function(data){
                     return data;
                 })
                 .error(function(err){
                     return err;
                 });
-        }*/
+        }
         //temporary test version
-        sendData: function(contestData){
+        /*sendData: function(contestData){
             return $http.get("Scripts/version.json")
                 .success(function(data){
                     return contestData;
@@ -71,7 +71,11 @@ angular.module("ngAnimate").factory("SendContestData", ['$http', function($http)
                 .error(function(err){
                     return err;
                 })
-        }
+        }*/
     }
+
+}]);
+
+angular.module("ngAnimate").controller("SearchController", ["$scope", function($scope) {
 
 }]);
