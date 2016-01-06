@@ -4,8 +4,22 @@
     height:120px;
 }
 
+body{
+    background:#ffd800;
+}
+.container{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffd800+0,ffd800+0,ffffff+12,ffffff+21,ffffff+27,ffffff+34,ffffff+42,ffffff+50,ffffff+56,ffffff+63,ffffff+68,ffffff+74,ffffff+80,ffffff+89,ffd800+100 */
+background: #ffd800; /* Old browsers */
+background: -moz-linear-gradient(left,  #ffd800 0%, #ffd800 0%, #ffffff 12%, #ffffff 21%, #ffffff 27%, #ffffff 34%, #ffffff 42%, #ffffff 50%, #ffffff 56%, #ffffff 63%, #ffffff 68%, #ffffff 74%, #ffffff 80%, #ffffff 89%, #ffd800 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #ffd800 0%,#ffd800 0%,#ffffff 12%,#ffffff 21%,#ffffff 27%,#ffffff 34%,#ffffff 42%,#ffffff 50%,#ffffff 56%,#ffffff 63%,#ffffff 68%,#ffffff 74%,#ffffff 80%,#ffffff 89%,#ffd800 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #ffd800 0%,#ffd800 0%,#ffffff 12%,#ffffff 21%,#ffffff 27%,#ffffff 34%,#ffffff 42%,#ffffff 50%,#ffffff 56%,#ffffff 63%,#ffffff 68%,#ffffff 74%,#ffffff 80%,#ffffff 89%,#ffd800 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd800', endColorstr='#ffd800',GradientType=1 ); /* IE6-9 */
+
+
+
+}
 .title-content{
-    font-size: 2.9vw;
+    font-size: 4.9vw;
     font-family: 'EB Garamond', serif;
 }
 h2{
@@ -13,6 +27,12 @@ h2{
     font-family: 'EB Garamond', serif;
     font-weight:900;
     color:red;
+}
+h6{
+    font-family: 'EB Garamond', serif;
+    font-weight:900;
+    color:red;
+    font-size:16px;
 }
 
 .p-content{

@@ -63,6 +63,12 @@
 .background_6{
      background-image: url('../Images/Browar.jpg');
 }
+.background_7{
+     background-image: url('../Images/historia_1.jpg');
+}
+.background_8{
+     background-image: url('../Images/historia_2.jpg');
+}
 .main-container {
     background-size:100% auto;
     background-repeat:no-repeat;
@@ -85,8 +91,9 @@
 .mobile{
   display:none;
   border:1px solid silver;
-  opacity:1;
+  opacity:0.9;
   background-size:100% auto;
+ 
 }
 
 
@@ -119,7 +126,7 @@
   }
   .info-container-main{
     width:273px;
-    height:304px;
+    height:273px;
   }
    .info-container-content{
     width:273px;
@@ -152,74 +159,77 @@
 
 @media (max-width: 670px){
    .main-container{
-    width:203px;
-    height:204px;
+    width:233px;
+    height:234px;
 
   }
   .info-container-main{
-    width:203px;
-    height:204px;
+    width:233px;
+    height:234px;
     display:none;
   }
    .info-container-content{
-    width:203px;
-    height:204px;
+    width:233px;
+    height:234px;
   }
   .mobile{
     display:inline-block;
-     width:203px;
-    height:204px;
+     width:233px;
+    height:234px;
+}
+  .tile-container{
+   padding-left:0%;
 }
 }
 @media (max-width: 600px){
    .main-container{
-    width:203px;
-    height:203px;
+    width:233px;
+    height:233px;
 
   }
   .info-container-main{
-    width:203px;
-    height:203px;
+    width:233px;
+    height:233px;
     display:none;
   }
    .info-container-content{
-    width:203px;
-    height:203px;
+    width:233px;
+    height:233px;
   }
   .mobile{
     display:inline-block;
-    width:203px;
-    height:203px;
+    width:233px;
+    height:233px;
 }
     .tile-container{
-   padding-left:15%;
+   padding-left:4%;
 }
 
 }
 
 @media (max-width: 500px){
    .main-container{
-    width:203px;
-    height:203px;
+    width:233px;
+    height:233px;
 
   }
   .info-container-main{
-    width:203px;
-    height:203px;
+    width:233px;
+    height:233px;
     display:none;
   }
    .info-container-content{
-    width:203px;
-    height:203px;
+    width:233px;
+    height:233px;
   }
   
   .tile-container{
-   padding-left:15%;
+   padding-left:9%;
 }
 .mobile{
     display:inline-block;
-      width:203px;
-    height:203px;
+      width:233px;
+    height:233px;
 }
   
 }
@@ -234,8 +244,8 @@
 }
 .mobile{
     display:inline-block;
-     width:203px;
-    height:203px;
+     width:233px;
+    height:233px;
 }
 
 }
@@ -249,6 +259,9 @@
 .mobile-container-content{
 text-align:center;
   font-family: 'Muli', sans-serif;
-  font-size:2.1vw;
   color:white;
+}
+
+button{
+    font-family: 'Signika Negative', sans-serif;
 }

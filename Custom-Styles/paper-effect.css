@@ -1,12 +1,12 @@
 ﻿     .note {
-          background:#e5c100;/*Background color of note-info content*/
+          background:#424242;/*Background color of note-info content*/
           position:relative;
           overflow:hidden;
       }
 
       .note:before {
-          border-color:#fff #fff #665600 #665600; /*Color for the border of note, should be the same as background color above*/
-          background:#665600; /*Color for the corner of note  */
+          border-color:#fff #fff #424242 #424242; /*Color for the border of note, should be the same as background color above*/
+          background:#424242; /*Color for the corner of note  */
           content:"";
           position:absolute;
           top:0;
@@ -19,3 +19,5 @@
           -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
           box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
       }
+
+      /*background:#e5c100;*/
