@@ -76,6 +76,32 @@ angular.module("ngAnimate").factory("SendContestData", ['$http', function($http)
 
 }]);
 
-angular.module("ngAnimate").controller("SearchController", ["$scope", function($scope) {
+angular.module("ngAnimate").controller("SearchController", ["$scope", "SendSearchQuery", function($scope, SendSearchQuery) {
+    $scope.search = function(){
+        if(!$scope.query) return;
+        SendSearchQuery.sendQuery($scope.query)
+            .success(function(data){
+                console.log(data);
+            })
+            .error(function(err){
+                alert(err);
+
+            });
+    }
+}]);
+
+angular.module("ngAnimate").factory("SendSearchQuery", ['$http', function($http){
+    return {
+        //for sending actual data to server
+        sendQuery: function(q){
+            return $http.post("http://localhost:2137/search/", {query: q})
+                .success(function(data){
+                    return data;
+                })
+                .error(function(err){
+                    return err;
+                });
+        }
+    }
 
 }]);
