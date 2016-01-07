@@ -1,0 +1,12 @@
+<div class="popover-content">
+    <h1>Wyniki ({{results.length}})</h1>
+    <div class="list-group">
+        <div class="list-group-item" ng-repeat="res in results">
+            <a href="{{res.url}}">
+            <h4 class="list-group-item-heading">{{res.title}}</h4>
+            </a>
+            <p class="list-group-item-text">{{res.content}}</p>
+        </div>
+    </div>
+    <p ng-show="results.length === 0">Brak wyników</p>
+</div>

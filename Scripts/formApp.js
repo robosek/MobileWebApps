@@ -1,4 +1,6 @@
-angular.module("ngAnimate").controller("ContestFormController", ["$scope", "SendContestData", function($scope, SendContestData){
+var app = angular.module("app", ["ngAnimate", 'ngDialog']);
+
+app.controller("ContestFormController", ["$scope", "SendContestData", function($scope, SendContestData){
     $scope.formData = {
         title: "Dlaczego wybieram EB?",
         content: "Chcesz wygrać samochód, tablet lub noworoczny zapas piwa EB? Napisz zabawny wiersz lub piosenkę, w którym powiesz dlaczego wybierasz właśnie EB i podziel się nim z nami! Na zgłoszenia czekamy do 1.02.2016 r.",
@@ -50,7 +52,7 @@ angular.module("ngAnimate").controller("ContestFormController", ["$scope", "Send
     };
 }]);
 
-angular.module("ngAnimate").factory("SendContestData", ['$http', function($http){
+app.factory("SendContestData", ['$http', function($http){
     return {
         //for sending actual data to server
         sendData: function(contestData){
@@ -62,26 +64,25 @@ angular.module("ngAnimate").factory("SendContestData", ['$http', function($http)
                     return err;
                 });
         }
-        //temporary test version
-        /*sendData: function(contestData){
-            return $http.get("Scripts/version.json")
-                .success(function(data){
-                    return contestData;
-                })
-                .error(function(err){
-                    return err;
-                })
-        }*/
     }
 
 }]);
 
-angular.module("ngAnimate").controller("SearchController", ["$scope", "SendSearchQuery", function($scope, SendSearchQuery) {
+
+
+
+app.controller("SearchController", ["$scope", "SendSearchQuery", "ngDialog", function($scope, SendSearchQuery, ngDialog) {
     $scope.search = function(){
         if(!$scope.query) return;
         SendSearchQuery.sendQuery($scope.query)
             .success(function(data){
-                console.log(data);
+                $scope.results = data;
+                //console.log(data);
+                //opens dialog using template and passes scope object
+                ngDialog.open({
+                    template: 'search_results.html',
+                    scope: $scope
+                });
             })
             .error(function(err){
                 alert(err);
@@ -90,7 +91,7 @@ angular.module("ngAnimate").controller("SearchController", ["$scope", "SendSearc
     }
 }]);
 
-angular.module("ngAnimate").factory("SendSearchQuery", ['$http', function($http){
+app.factory("SendSearchQuery", ['$http', function($http){
     return {
         //for sending actual data to server
         sendQuery: function(q){
